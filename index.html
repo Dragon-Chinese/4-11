@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<header class="header">
+
+			</header>
+			<main>
+				<nav>
+					<span class="act"><i></i><b>电源</b></span>
+					<span><i></i><b>首页</b></span>
+					<span><i></i><b>菜单</b></span>
+					<span><i></i><b>截屏</b></span>
+				</nav>
+				<ul>
+					<li class="add">电源</li>
+					<li>首页</li>
+					<li>菜单</li>
+					<li>截屏</li>
+				</ul>
+			</main>
+		</div>
+
+	</body>
+	<script src="js/script.js"></script>
+	<script>
+		let Span = document.querySelectorAll("nav span");
+		let Li = document.querySelectorAll("main ul li")
+		for(let i=0;i<Span.length;i++){
+			Span[i].onclick = function () {
+				for(let j=0;j<Li.length;j++){
+					Li[j].className = "";
+					Span[j].className = "";
+				}
+				Li[i].className = "add";
+				Span[i].className = "act";
+			}
+		}
+	</script>
+
+</html>
